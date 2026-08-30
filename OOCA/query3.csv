@@ -1,0 +1,36 @@
+query_name,city,forecast_date,peakrain,max_rain_chance
+"Q3: Rain Chance",Bangkok,2026-08-28,07:00:00,96
+"Q3: Rain Chance",Bangkok,2026-08-29,15:00:00,91
+"Q3: Rain Chance",Bangkok,2026-08-30,15:00:00,90
+"Q3: Rain Chance",Bangkok,2026-08-31,16:00:00,65
+"Q3: Rain Chance",Bangkok,2026-09-01,16:00:00,75
+"Q3: Rain Chance",Bangkok,2026-09-02,16:00:00,76
+"Q3: Rain Chance",Bangkok,2026-09-03,19:00:00,96
+"Q3: Rain Chance","Chiang Mai",2026-08-28,14:00:00,87
+"Q3: Rain Chance","Chiang Mai",2026-08-29,14:00:00,100
+"Q3: Rain Chance","Chiang Mai",2026-08-30,16:00:00,100
+"Q3: Rain Chance","Chiang Mai",2026-08-31,15:00:00,100
+"Q3: Rain Chance","Chiang Mai",2026-09-01,17:00:00,99
+"Q3: Rain Chance","Chiang Mai",2026-09-02,15:00:00,98
+"Q3: Rain Chance","Chiang Mai",2026-09-03,16:00:00,93
+"Q3: Rain Chance","Hat Yai",2026-08-28,16:00:00,98
+"Q3: Rain Chance","Hat Yai",2026-08-29,16:00:00,73
+"Q3: Rain Chance","Hat Yai",2026-08-30,16:00:00,76
+"Q3: Rain Chance","Hat Yai",2026-08-31,16:00:00,80
+"Q3: Rain Chance","Hat Yai",2026-09-01,16:00:00,71
+"Q3: Rain Chance","Hat Yai",2026-09-02,16:00:00,92
+"Q3: Rain Chance","Hat Yai",2026-09-03,18:00:00,73
+"Q3: Rain Chance","Khon Kaen",2026-08-28,16:00:00,65
+"Q3: Rain Chance","Khon Kaen",2026-08-29,18:00:00,69
+"Q3: Rain Chance","Khon Kaen",2026-08-30,23:00:00,63
+"Q3: Rain Chance","Khon Kaen",2026-08-31,13:00:00,84
+"Q3: Rain Chance","Khon Kaen",2026-09-01,14:00:00,94
+"Q3: Rain Chance","Khon Kaen",2026-09-02,13:00:00,84
+"Q3: Rain Chance","Khon Kaen",2026-09-03,18:00:00,97
+"Q3: Rain Chance",Phuket,2026-08-28,15:00:00,81
+"Q3: Rain Chance",Phuket,2026-08-29,08:00:00,62
+"Q3: Rain Chance",Phuket,2026-08-30,14:00:00,86
+"Q3: Rain Chance",Phuket,2026-08-31,13:00:00,82
+"Q3: Rain Chance",Phuket,2026-09-01,14:00:00,77
+"Q3: Rain Chance",Phuket,2026-09-02,14:00:00,86
+"Q3: Rain Chance",Phuket,2026-09-03,12:00:00,90

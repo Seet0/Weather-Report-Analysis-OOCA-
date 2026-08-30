@@ -1,0 +1,36 @@
+query_name,city,forecast_date,dailyavgtemp,prevdayavgtemp,tempdiff
+"Q4: Day Temp Change",Bangkok,2026-08-28,27.9,NULL,NULL
+"Q4: Day Temp Change",Bangkok,2026-08-29,28.1,27.9,0.2
+"Q4: Day Temp Change",Bangkok,2026-08-30,27.6,28.1,-0.5
+"Q4: Day Temp Change",Bangkok,2026-08-31,27.4,27.6,-0.2
+"Q4: Day Temp Change",Bangkok,2026-09-01,28.1,27.4,0.7
+"Q4: Day Temp Change",Bangkok,2026-09-02,27.4,28.1,-0.7
+"Q4: Day Temp Change",Bangkok,2026-09-03,28,27.4,0.6
+"Q4: Day Temp Change","Chiang Mai",2026-08-28,27.2,NULL,NULL
+"Q4: Day Temp Change","Chiang Mai",2026-08-29,26.1,27.2,-1.1
+"Q4: Day Temp Change","Chiang Mai",2026-08-30,25.1,26.1,-1
+"Q4: Day Temp Change","Chiang Mai",2026-08-31,24.7,25.1,-0.4
+"Q4: Day Temp Change","Chiang Mai",2026-09-01,25,24.7,0.3
+"Q4: Day Temp Change","Chiang Mai",2026-09-02,24.9,25,-0.1
+"Q4: Day Temp Change","Chiang Mai",2026-09-03,26,24.9,1.1
+"Q4: Day Temp Change","Hat Yai",2026-08-28,29.5,NULL,NULL
+"Q4: Day Temp Change","Hat Yai",2026-08-29,28.9,29.5,-0.6
+"Q4: Day Temp Change","Hat Yai",2026-08-30,29.5,28.9,0.6
+"Q4: Day Temp Change","Hat Yai",2026-08-31,28.6,29.5,-0.9
+"Q4: Day Temp Change","Hat Yai",2026-09-01,28.9,28.6,0.3
+"Q4: Day Temp Change","Hat Yai",2026-09-02,27.4,28.9,-1.5
+"Q4: Day Temp Change","Hat Yai",2026-09-03,27.2,27.4,-0.2
+"Q4: Day Temp Change","Khon Kaen",2026-08-28,28.7,NULL,NULL
+"Q4: Day Temp Change","Khon Kaen",2026-08-29,27.4,28.7,-1.3
+"Q4: Day Temp Change","Khon Kaen",2026-08-30,27,27.4,-0.4
+"Q4: Day Temp Change","Khon Kaen",2026-08-31,25.7,27,-1.3
+"Q4: Day Temp Change","Khon Kaen",2026-09-01,25.5,25.7,-0.2
+"Q4: Day Temp Change","Khon Kaen",2026-09-02,26.3,25.5,0.8
+"Q4: Day Temp Change","Khon Kaen",2026-09-03,26.7,26.3,0.4
+"Q4: Day Temp Change",Phuket,2026-08-28,29,NULL,NULL
+"Q4: Day Temp Change",Phuket,2026-08-29,28.4,29,-0.6
+"Q4: Day Temp Change",Phuket,2026-08-30,27.1,28.4,-1.3
+"Q4: Day Temp Change",Phuket,2026-08-31,27.6,27.1,0.5
+"Q4: Day Temp Change",Phuket,2026-09-01,28.2,27.6,0.6
+"Q4: Day Temp Change",Phuket,2026-09-02,26.2,28.2,-2
+"Q4: Day Temp Change",Phuket,2026-09-03,26.3,26.2,0.1

@@ -1,0 +1,1128 @@
+
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Weather Summary Report</title>
+                <style>
+                body {font-family: "Times New Roman", Times, serif; margin: 40px; background-color: #CC4757;} 
+                .table {border-collapse: collapse; width: 80%; max-width: 800px; margin-bottom: 25px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+                .table th, .table td {padding: 6px 10px; text-align: center; border-bottom: 1px solid #DDD;}
+                .table th {background-color: #B660CD; color: white;}
+                .table tr:hover {background-color: #F1F1F1;}
+
+                h1, h2, p {color: white;}
+                h1 {font-size: 32px; text-decoration: underline;}
+                h2 {margin-top: 40px; margin-bottom: 12px; font-size: 18px}
+
+                p {font-size: 14px; font-style: italic;}
+                </style>
+        </head>
+        <body>
+            <h1>Weather Summary Report of 5 Thai Cities</h1>
+                <p>Data from MySQL Workbench database (<code>weather_db.hr_weather</code>)</p>
+
+                    <h2>Query 1: Average, Max, and Min Temperatures per City per Day</h2>
+                    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>query_name</th>
+      <th>city</th>
+      <th>forecast_date</th>
+      <th>temp_avg</th>
+      <th>temp_max</th>
+      <th>temp_min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-08-28</td>
+      <td>27.9</td>
+      <td>30.5</td>
+      <td>25.6</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-08-29</td>
+      <td>28.1</td>
+      <td>29.9</td>
+      <td>26.7</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-08-30</td>
+      <td>28.2</td>
+      <td>31.5</td>
+      <td>26.6</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-08-31</td>
+      <td>27.6</td>
+      <td>32.2</td>
+      <td>25.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-09-01</td>
+      <td>28.1</td>
+      <td>32.3</td>
+      <td>25.5</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-09-02</td>
+      <td>27.6</td>
+      <td>30.6</td>
+      <td>25.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-09-03</td>
+      <td>28.3</td>
+      <td>32.8</td>
+      <td>25.8</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-09-04</td>
+      <td>28.1</td>
+      <td>32.9</td>
+      <td>25.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Bangkok</td>
+      <td>2026-09-05</td>
+      <td>28.4</td>
+      <td>32.8</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-28</td>
+      <td>27.2</td>
+      <td>30.7</td>
+      <td>24.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-29</td>
+      <td>26.1</td>
+      <td>29.0</td>
+      <td>24.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-30</td>
+      <td>25.9</td>
+      <td>28.7</td>
+      <td>24.5</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-31</td>
+      <td>25.2</td>
+      <td>28.1</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-01</td>
+      <td>25.5</td>
+      <td>28.7</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-02</td>
+      <td>25.8</td>
+      <td>29.3</td>
+      <td>23.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-03</td>
+      <td>25.7</td>
+      <td>28.3</td>
+      <td>23.8</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-04</td>
+      <td>25.6</td>
+      <td>28.4</td>
+      <td>23.0</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-05</td>
+      <td>25.5</td>
+      <td>27.5</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-08-28</td>
+      <td>29.5</td>
+      <td>34.5</td>
+      <td>25.3</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-08-29</td>
+      <td>28.9</td>
+      <td>33.1</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-08-30</td>
+      <td>28.9</td>
+      <td>34.1</td>
+      <td>24.4</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-08-31</td>
+      <td>29.4</td>
+      <td>34.9</td>
+      <td>24.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-09-01</td>
+      <td>29.2</td>
+      <td>36.0</td>
+      <td>24.7</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-09-02</td>
+      <td>27.7</td>
+      <td>32.5</td>
+      <td>24.7</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-09-03</td>
+      <td>26.1</td>
+      <td>29.2</td>
+      <td>23.5</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-09-04</td>
+      <td>27.4</td>
+      <td>32.8</td>
+      <td>24.4</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Hat Yai</td>
+      <td>2026-09-05</td>
+      <td>27.1</td>
+      <td>32.6</td>
+      <td>24.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-28</td>
+      <td>28.7</td>
+      <td>32.3</td>
+      <td>25.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-29</td>
+      <td>27.4</td>
+      <td>31.3</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-30</td>
+      <td>27.0</td>
+      <td>31.0</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-31</td>
+      <td>27.1</td>
+      <td>30.2</td>
+      <td>24.7</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-01</td>
+      <td>26.4</td>
+      <td>29.8</td>
+      <td>24.4</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-02</td>
+      <td>27.4</td>
+      <td>31.7</td>
+      <td>24.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-03</td>
+      <td>26.8</td>
+      <td>30.3</td>
+      <td>24.9</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-04</td>
+      <td>26.7</td>
+      <td>30.4</td>
+      <td>25.4</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-05</td>
+      <td>26.7</td>
+      <td>30.2</td>
+      <td>24.6</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-08-28</td>
+      <td>29.0</td>
+      <td>32.5</td>
+      <td>27.5</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-08-29</td>
+      <td>28.4</td>
+      <td>32.0</td>
+      <td>27.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-08-30</td>
+      <td>29.3</td>
+      <td>32.4</td>
+      <td>27.4</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-08-31</td>
+      <td>29.2</td>
+      <td>32.4</td>
+      <td>27.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-09-01</td>
+      <td>28.8</td>
+      <td>32.3</td>
+      <td>26.7</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-09-02</td>
+      <td>26.7</td>
+      <td>30.7</td>
+      <td>24.2</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-09-03</td>
+      <td>26.1</td>
+      <td>29.5</td>
+      <td>24.8</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-09-04</td>
+      <td>27.5</td>
+      <td>30.2</td>
+      <td>25.7</td>
+    </tr>
+    <tr>
+      <td>Q1: Metrics</td>
+      <td>Phuket</td>
+      <td>2026-09-05</td>
+      <td>27.2</td>
+      <td>29.8</td>
+      <td>25.6</td>
+    </tr>
+  </tbody>
+</table>
+
+                    <h2>Query 2: Widest Temperature Range over the Next 7 Days</h2>
+                    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>query_name</th>
+      <th>city</th>
+      <th>temp_max</th>
+      <th>temp_min</th>
+      <th>temp_range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Q2: Widest</td>
+      <td>Hat Yai</td>
+      <td>36.0</td>
+      <td>23.5</td>
+      <td>12.5</td>
+    </tr>
+  </tbody>
+</table>
+
+                    <h2>Query 3: Highest Precipitation Probability per City per Day</h2>
+                    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>query_name</th>
+      <th>city</th>
+      <th>forecast_date</th>
+      <th>peakrain</th>
+      <th>max_rain_chance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-08-28</td>
+      <td>0 days 07:00:00</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-08-29</td>
+      <td>0 days 15:00:00</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-08-30</td>
+      <td>0 days 16:00:00</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-08-31</td>
+      <td>0 days 16:00:00</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-09-01</td>
+      <td>0 days 18:00:00</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-09-02</td>
+      <td>0 days 16:00:00</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-09-03</td>
+      <td>0 days 17:00:00</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-09-04</td>
+      <td>0 days 17:00:00</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Bangkok</td>
+      <td>2026-09-05</td>
+      <td>0 days 19:00:00</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-28</td>
+      <td>0 days 14:00:00</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-29</td>
+      <td>0 days 14:00:00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-30</td>
+      <td>0 days 14:00:00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-31</td>
+      <td>0 days 00:00:00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-01</td>
+      <td>0 days 15:00:00</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-02</td>
+      <td>0 days 15:00:00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-03</td>
+      <td>0 days 14:00:00</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-04</td>
+      <td>0 days 14:00:00</td>
+      <td>97</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-05</td>
+      <td>0 days 16:00:00</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-08-28</td>
+      <td>0 days 16:00:00</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-08-29</td>
+      <td>0 days 16:00:00</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-08-30</td>
+      <td>0 days 16:00:00</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-08-31</td>
+      <td>0 days 15:00:00</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-09-01</td>
+      <td>0 days 16:00:00</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-09-02</td>
+      <td>0 days 16:00:00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-09-03</td>
+      <td>0 days 15:00:00</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-09-04</td>
+      <td>0 days 16:00:00</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Hat Yai</td>
+      <td>2026-09-05</td>
+      <td>0 days 19:00:00</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-28</td>
+      <td>0 days 16:00:00</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-29</td>
+      <td>0 days 18:00:00</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-30</td>
+      <td>0 days 23:00:00</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-31</td>
+      <td>0 days 02:00:00</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-01</td>
+      <td>0 days 14:00:00</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-02</td>
+      <td>0 days 16:00:00</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-03</td>
+      <td>0 days 18:00:00</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-04</td>
+      <td>0 days 13:00:00</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-05</td>
+      <td>0 days 16:00:00</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-08-28</td>
+      <td>0 days 15:00:00</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-08-29</td>
+      <td>0 days 08:00:00</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-08-30</td>
+      <td>0 days 14:00:00</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-08-31</td>
+      <td>0 days 13:00:00</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-09-01</td>
+      <td>0 days 15:00:00</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-09-02</td>
+      <td>0 days 14:00:00</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-09-03</td>
+      <td>0 days 13:00:00</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-09-04</td>
+      <td>0 days 13:00:00</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>Q3: Rain Chance</td>
+      <td>Phuket</td>
+      <td>2026-09-05</td>
+      <td>0 days 15:00:00</td>
+      <td>75</td>
+    </tr>
+  </tbody>
+</table>
+
+                    <h2>Query 4: Temperature Difference between Previous and Current Day</h2>
+                    <table border="1" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>query_name</th>
+      <th>city</th>
+      <th>forecast_date</th>
+      <th>dailyavgtemp</th>
+      <th>prevdayavgtemp</th>
+      <th>tempdiff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-08-28</td>
+      <td>27.9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-08-29</td>
+      <td>28.1</td>
+      <td>27.9</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-08-30</td>
+      <td>28.2</td>
+      <td>28.1</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-08-31</td>
+      <td>27.6</td>
+      <td>28.2</td>
+      <td>-0.6</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-09-01</td>
+      <td>28.1</td>
+      <td>27.6</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-09-02</td>
+      <td>27.6</td>
+      <td>28.1</td>
+      <td>-0.5</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-09-03</td>
+      <td>28.3</td>
+      <td>27.6</td>
+      <td>0.7</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-09-04</td>
+      <td>28.1</td>
+      <td>28.3</td>
+      <td>-0.2</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Bangkok</td>
+      <td>2026-09-05</td>
+      <td>28.4</td>
+      <td>28.1</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-28</td>
+      <td>27.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-29</td>
+      <td>26.1</td>
+      <td>27.2</td>
+      <td>-1.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-30</td>
+      <td>25.9</td>
+      <td>26.1</td>
+      <td>-0.2</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-08-31</td>
+      <td>25.2</td>
+      <td>25.9</td>
+      <td>-0.7</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-01</td>
+      <td>25.5</td>
+      <td>25.2</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-02</td>
+      <td>25.8</td>
+      <td>25.5</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-03</td>
+      <td>25.7</td>
+      <td>25.8</td>
+      <td>-0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-04</td>
+      <td>25.6</td>
+      <td>25.7</td>
+      <td>-0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Chiang Mai</td>
+      <td>2026-09-05</td>
+      <td>25.5</td>
+      <td>25.6</td>
+      <td>-0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-08-28</td>
+      <td>29.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-08-29</td>
+      <td>28.9</td>
+      <td>29.5</td>
+      <td>-0.6</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-08-30</td>
+      <td>28.9</td>
+      <td>28.9</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-08-31</td>
+      <td>29.4</td>
+      <td>28.9</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-09-01</td>
+      <td>29.2</td>
+      <td>29.4</td>
+      <td>-0.2</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-09-02</td>
+      <td>27.7</td>
+      <td>29.2</td>
+      <td>-1.5</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-09-03</td>
+      <td>26.1</td>
+      <td>27.7</td>
+      <td>-1.6</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-09-04</td>
+      <td>27.4</td>
+      <td>26.1</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Hat Yai</td>
+      <td>2026-09-05</td>
+      <td>27.1</td>
+      <td>27.4</td>
+      <td>-0.3</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-28</td>
+      <td>28.7</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-29</td>
+      <td>27.4</td>
+      <td>28.7</td>
+      <td>-1.3</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-30</td>
+      <td>27.0</td>
+      <td>27.4</td>
+      <td>-0.4</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-08-31</td>
+      <td>27.1</td>
+      <td>27.0</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-01</td>
+      <td>26.4</td>
+      <td>27.1</td>
+      <td>-0.7</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-02</td>
+      <td>27.4</td>
+      <td>26.4</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-03</td>
+      <td>26.8</td>
+      <td>27.4</td>
+      <td>-0.6</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-04</td>
+      <td>26.7</td>
+      <td>26.8</td>
+      <td>-0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Khon Kaen</td>
+      <td>2026-09-05</td>
+      <td>26.7</td>
+      <td>26.7</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-08-28</td>
+      <td>29.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-08-29</td>
+      <td>28.4</td>
+      <td>29.0</td>
+      <td>-0.6</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-08-30</td>
+      <td>29.3</td>
+      <td>28.4</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-08-31</td>
+      <td>29.2</td>
+      <td>29.3</td>
+      <td>-0.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-09-01</td>
+      <td>28.8</td>
+      <td>29.2</td>
+      <td>-0.4</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-09-02</td>
+      <td>26.7</td>
+      <td>28.8</td>
+      <td>-2.1</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-09-03</td>
+      <td>26.1</td>
+      <td>26.7</td>
+      <td>-0.6</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-09-04</td>
+      <td>27.5</td>
+      <td>26.1</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <td>Q4: Day Temp Change</td>
+      <td>Phuket</td>
+      <td>2026-09-05</td>
+      <td>27.2</td>
+      <td>27.5</td>
+      <td>-0.3</td>
+    </tr>
+  </tbody>
+</table>
+        </body>
+    </html>    

@@ -1,0 +1,36 @@
+query_name,city,forecast_date,temp_avg,temp_max,temp_min
+"Q1: Metrics",Bangkok,2026-08-28,27.9,30.5,25.6
+"Q1: Metrics",Bangkok,2026-08-29,28.1,29.9,26.7
+"Q1: Metrics",Bangkok,2026-08-30,27.6,30.4,26.1
+"Q1: Metrics",Bangkok,2026-08-31,27.4,30.3,25.3
+"Q1: Metrics",Bangkok,2026-09-01,28.1,32,25.7
+"Q1: Metrics",Bangkok,2026-09-02,27.4,30.3,24.9
+"Q1: Metrics",Bangkok,2026-09-03,28,32.5,25.2
+"Q1: Metrics","Chiang Mai",2026-08-28,27.2,30.7,24.2
+"Q1: Metrics","Chiang Mai",2026-08-29,26.1,29,24.2
+"Q1: Metrics","Chiang Mai",2026-08-30,25.1,26.1,24.3
+"Q1: Metrics","Chiang Mai",2026-08-31,24.7,26.2,23.5
+"Q1: Metrics","Chiang Mai",2026-09-01,25,27,23.5
+"Q1: Metrics","Chiang Mai",2026-09-02,24.9,27.2,23.1
+"Q1: Metrics","Chiang Mai",2026-09-03,26,29.8,23.7
+"Q1: Metrics","Hat Yai",2026-08-28,29.5,34.5,25.3
+"Q1: Metrics","Hat Yai",2026-08-29,28.9,33.1,26
+"Q1: Metrics","Hat Yai",2026-08-30,29.5,34.9,25.6
+"Q1: Metrics","Hat Yai",2026-08-31,28.6,33.5,25.5
+"Q1: Metrics","Hat Yai",2026-09-01,28.9,34.1,25
+"Q1: Metrics","Hat Yai",2026-09-02,27.4,31.5,24.5
+"Q1: Metrics","Hat Yai",2026-09-03,27.2,32.6,23.5
+"Q1: Metrics","Khon Kaen",2026-08-28,28.7,32.3,25.9
+"Q1: Metrics","Khon Kaen",2026-08-29,27.4,31.3,26
+"Q1: Metrics","Khon Kaen",2026-08-30,27,29.9,25.2
+"Q1: Metrics","Khon Kaen",2026-08-31,25.7,28.1,24.6
+"Q1: Metrics","Khon Kaen",2026-09-01,25.5,26.7,24
+"Q1: Metrics","Khon Kaen",2026-09-02,26.3,30.1,24.9
+"Q1: Metrics","Khon Kaen",2026-09-03,26.7,31.3,24.3
+"Q1: Metrics",Phuket,2026-08-28,29,32.5,27.5
+"Q1: Metrics",Phuket,2026-08-29,28.4,32,27.2
+"Q1: Metrics",Phuket,2026-08-30,27.1,30.5,23.9
+"Q1: Metrics",Phuket,2026-08-31,27.6,29.2,25
+"Q1: Metrics",Phuket,2026-09-01,28.2,31.8,25.4
+"Q1: Metrics",Phuket,2026-09-02,26.2,28.7,24.2
+"Q1: Metrics",Phuket,2026-09-03,26.3,28.9,23.5
