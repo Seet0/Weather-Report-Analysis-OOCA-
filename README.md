@@ -18,7 +18,7 @@ database will never allow two rows with the exact same city and forecast time.
 ### Data Issues
 * Timestamp Formatting Mismatch: The most annoying thing I came across was the weather API website (Open-Meteo) returning dissimilar timestamp
 fromatting with respect to SQL. I spent quite some time figuring out why there were errors and had to search up why my timestamps weren't working
-as intended. 
+as intended. In the end, I used a replace function to take out the `T` delimiter and changed it to the default datetime format of SQL. 
 
 ### 24/7 Update Changes
 If I were to update this to be a script that updates every hour forever, then I would definitely:
