@@ -12,6 +12,30 @@ Following reviewer feedback, this codebase was audited and hardened:
 * Single Source of Truth: Replaced duplicate query strings in `htmlreport.py` by reading statements directly from `queries.sql` on disk.
 * Data Integrity Checks: Verified sequential idempotency (840 rows on first run, remaining 840 on consecutive re-runs with 0 duplicate key collisions) and asserted sanity checks (168 rows/city, zero nulls, temperatures within sane operational thresholds).
 
+### Failure Path & Resilience Verification (simulated bad API)
+To prove that the pipeline catches API breakdowns and does not crash when handling an error, I deliberately added a bad endpoint `InvalidCity` with out-of-bounds coordinates (`lat: 999.0, long: 999.0`). 
+
+When executed, `resp.raise_for_status()` caught the HTTP 400 Bad Request error, appended the failure to `city_failed`, bypassed only the broken node, and cleanly completed the remaining 5 Thai cities without terminating the program:
+
+```text
+Database initialized from schema.sql
+Ingestion starting
+SUCCESS: No errors for Bangkok
+SUCCESS: No errors for Chiang Mai
+SUCCESS: No errors for Phuket
+SUCCESS: No errors for Khon Kaen
+SUCCESS: No errors for Hat Yai
+ERROR: For InvalidCity, 400 Client Error: Bad Request for url: https://api.open-meteo.com/v1/forecast?latitude=999.0&longitude=999.0&hourly=temperature_2m&hourly=precipitation_probability&forecast_days=7&timezone=Asia%2FBangkok
+[DATA AUDIT PASS] Zero NULL values found across temperature and rain probability columns.
+Log Summary
+Number of cities attempted: 6
+Number of successes: 5
+Number of errors: 1
+Total rows processed: 840
+Total time taken: 5.46 seconds
+Error Details: [('InvalidCity', '400 Client Error: Bad Request for url: https://api.open-meteo.com/v1/forecast?latitude=999.0&longitude=999.0&hourly=temperature_2m&hourly=precipitation_probability&forecast_days=7&timezone=Asia%2FBangkok')]
+```
+
 ### Schema Design
 * Single Table Design (`hr_weather`): Only 840 rows are needed for a 7-day run, so a single table is the most appropriate. I kept it as simple as possible so that the system wouldn't take a lot of processing time.
 * Composite Primary Key (`city, forecast_time`): I linked these two variables together in order to prevent duplicate-type errors. They uniquely identify each hourly record per location.
