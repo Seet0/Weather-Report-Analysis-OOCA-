@@ -1,0 +1,36 @@
+query_name,city,forecast_date,dailyavgtemp,prevdayavgtemp,tempdiff
+Q4: Day Temp Change,Bangkok,2026-09-11,26.9,,
+Q4: Day Temp Change,Bangkok,2026-09-12,26.5,26.9,-0.4
+Q4: Day Temp Change,Bangkok,2026-09-13,26.9,26.5,0.4
+Q4: Day Temp Change,Bangkok,2026-09-14,26.4,26.9,-0.5
+Q4: Day Temp Change,Bangkok,2026-09-15,26.9,26.4,0.5
+Q4: Day Temp Change,Bangkok,2026-09-16,27.0,26.9,0.1
+Q4: Day Temp Change,Bangkok,2026-09-17,26.6,27.0,-0.4
+Q4: Day Temp Change,Chiang Mai,2026-09-11,25.9,,
+Q4: Day Temp Change,Chiang Mai,2026-09-12,25.4,25.9,-0.5
+Q4: Day Temp Change,Chiang Mai,2026-09-13,27.4,25.4,2.0
+Q4: Day Temp Change,Chiang Mai,2026-09-14,27.9,27.4,0.5
+Q4: Day Temp Change,Chiang Mai,2026-09-15,26.5,27.9,-1.4
+Q4: Day Temp Change,Chiang Mai,2026-09-16,25.4,26.5,-1.1
+Q4: Day Temp Change,Chiang Mai,2026-09-17,24.9,25.4,-0.5
+Q4: Day Temp Change,Hat Yai,2026-09-11,26.4,,
+Q4: Day Temp Change,Hat Yai,2026-09-12,26.3,26.4,-0.1
+Q4: Day Temp Change,Hat Yai,2026-09-13,26.4,26.3,0.1
+Q4: Day Temp Change,Hat Yai,2026-09-14,26.3,26.4,-0.1
+Q4: Day Temp Change,Hat Yai,2026-09-15,27.1,26.3,0.8
+Q4: Day Temp Change,Hat Yai,2026-09-16,27.5,27.1,0.4
+Q4: Day Temp Change,Hat Yai,2026-09-17,27.3,27.5,-0.2
+Q4: Day Temp Change,Khon Kaen,2026-09-11,26.8,,
+Q4: Day Temp Change,Khon Kaen,2026-09-12,26.8,26.8,0.0
+Q4: Day Temp Change,Khon Kaen,2026-09-13,25.0,26.8,-1.8
+Q4: Day Temp Change,Khon Kaen,2026-09-14,25.2,25.0,0.2
+Q4: Day Temp Change,Khon Kaen,2026-09-15,25.6,25.2,0.4
+Q4: Day Temp Change,Khon Kaen,2026-09-16,25.5,25.6,-0.1
+Q4: Day Temp Change,Khon Kaen,2026-09-17,26.1,25.5,0.6
+Q4: Day Temp Change,Phuket,2026-09-11,26.5,,
+Q4: Day Temp Change,Phuket,2026-09-12,26.6,26.5,0.1
+Q4: Day Temp Change,Phuket,2026-09-13,25.6,26.6,-1.0
+Q4: Day Temp Change,Phuket,2026-09-14,24.9,25.6,-0.7
+Q4: Day Temp Change,Phuket,2026-09-15,24.9,24.9,0.0
+Q4: Day Temp Change,Phuket,2026-09-16,25.4,24.9,0.5
+Q4: Day Temp Change,Phuket,2026-09-17,25.8,25.4,0.4
