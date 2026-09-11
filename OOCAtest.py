@@ -19,6 +19,9 @@ base_url = "https://api.open-meteo.com/v1/forecast" #attachable with other param
 cities = {"Bangkok": {"lat": 13.7563, "long": 100.5018}, "Chiang Mai": {"lat": 18.7883, "long": 98.9853}, "Phuket": {"lat": 7.8804, "long": 98.3923}, "Khon Kaen":
           {"lat": 16.4322, "long": 102.8236}, "Hat Yai": {"lat": 7.0084, "long": 100.4767}}
 
+# for testing purposes to simulate failure
+cities["InvalidCity"] = {"lat": 999.0, "long": 999.0}
+
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 rawdir = os.path.join(base_dir, "rawdata")
@@ -47,7 +50,19 @@ def db_ini():
     print("Database initialized from schema.sql")
 
 
-
+# data quality / sanity check function
+def verify_data_quality(cursor):
+    cursor.execute("""
+        SELECT city, COUNT(*) 
+        FROM hr_weather 
+        WHERE temp IS NULL OR rain_chance IS NULL 
+        GROUP BY city
+    """)
+    nulls = cursor.fetchall()
+    if nulls:
+        print(f"[DATA AUDIT WARNING] Found null records: {nulls}")
+    else:
+        print("[DATA AUDIT PASS] Zero NULL values found across temperature and rain probability columns.")
 
 
 # weather function
@@ -65,7 +80,6 @@ def weather():
 
 
     print("Ingestion starting") #need for logs
-
 
 # EXTRACT
 #https://api.open-meteo.com/v1/forecast?latitude=13.7563&longitude=100.5018&hourly=temperature_2m,precipitation_probability&timezone=Asia%2FBangkok
@@ -112,12 +126,15 @@ def weather():
             city_failed.append((city, str(err)))
             print(f"ERROR: For {city}, {err}")
 
+    # Run automated data quality verification before closing connection
+    verify_data_quality(curs)
+
     curs.close()
     con.close()
 
     sec = round(time.time() - starttime, 2) #end - start rounded to 2 decimal places
 
-    #Log summary (Addressing Point 3: now printing total_rows)
+    #Log summary 
     print("Log Summary")
     print(f"Number of cities attempted: {len(cities)}")
     print(f"Number of successes: {city_success}")
