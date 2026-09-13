@@ -72,6 +72,11 @@ These weather metrics directly match common data tasks in supply chain engineeri
 ### AI Tools Usage
 > I used AI tools to help me debug my code. When I write code, I visualize an overall flow first before writing, but I often spend too much time debugging or not knowing a specific function that would help me more than the ones I know. AI is handy because of this. When I learned coding in university, I would often get stuck on debugging—the logic was right and the functions seemed right, but errors would still pop up. With AI, I can share the terminal tracebacks and error messages to pinpoint what went wrong, which saves huge amounts of time and lets me focus on building the logic.
 
+### Web Page Screenshot
+<p align="center">
+  <img src="assets/htmlreportpicture.png" alt="HTML Web Page Preview" width="800"/>
+</p>
+
 ---
 
 ### How to Run This Project
